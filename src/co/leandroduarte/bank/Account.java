@@ -1,9 +1,8 @@
 package co.leandroduarte.bank;
 
 /**
- * AUTHOR: vostoc
- * PROJECT: projeto-curso-tiago
- * CREATE DATE: 22/03/2023
+ * Classe da conta
+ * @author vostoc
  */
 
 public class Account {
@@ -17,7 +16,6 @@ public class Account {
     private String name;
 
     private double balance;
-
 
     private Log logger;
 
@@ -67,7 +65,7 @@ public class Account {
 
         // se nao der false, ele executa esse código que quer dizer que o saque foi liberado
         balance -= value;
-        logger.out("SAQUE -R$ " + value + " Sua conta agora é de R$ " + balance);
+        logger.out("SAQUE - R$ " + value + " Sua conta agora é de R$ " + balance);
         return true;
 
     }

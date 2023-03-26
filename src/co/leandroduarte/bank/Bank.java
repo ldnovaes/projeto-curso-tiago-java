@@ -4,9 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * AUTHOR: vostoc
- * PROJECT: projeto-curso-tiago
- * CREATE DATE: 23/03/2023 16:05
+ * Classe do banco
+ * @author vostoc
  */
 
 public class Bank {
@@ -33,17 +32,21 @@ public class Bank {
     public Account generateAccount(String name) {
         Account account = new Account(ag, "000" + lastAccount, name);
         lastAccount++;
+        accounts.add(account);
         return account;
     }
 
-    public String getBalance() {
-        return "oi";
+    public double getBalance() {
 
+        for (Account account:accounts) {
+            balance += account.getBalance();
+        }
 
+        return balance;
     }
 
     @Override
     public String toString() {
-        return "Esse banco tem um total de ";
+        return "Esse banco tem um total de R$ " + getBalance() + "reais.";
     }
 }

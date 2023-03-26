@@ -1,9 +1,8 @@
 package co.leandroduarte.bank;
 
 /**
- * AUTHOR: vostoc
- * PROJECT: projeto-curso-tiago
- * CREATE DATE: 23/03/2023
+ * Classe do Log
+ * @author vostoc
  */
 
 public class Log {
